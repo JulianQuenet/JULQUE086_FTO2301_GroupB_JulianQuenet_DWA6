@@ -3,12 +3,12 @@ import { BOOKS_PER_PAGE } from "./data.js";
 
 /**
  *
- * @param {Array} prop
+ * @param {Object} prop
  * @param {Number} [target]
  * @returns {Object}
  */
 export const loadedTracker = (prop) => {
-  if (typeof prop !== "array" || prop === null) {
+  if (typeof prop !== "object" || prop === null) {
     throw new Error(`${prop} needed to be an array. Expected an array, received ${typeof prop}.`);
   }
   let tracker = 0;
